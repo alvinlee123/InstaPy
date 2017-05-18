@@ -63,7 +63,7 @@ RUN apt-get clean \
 
 # Adding InstaPy
 RUN git clone https://github.com/timgrossmann/InstaPy.git \
-    && wget ${CRHOMEDRIVER} \
+    && wget ${CHROMEDRIVER} \
     && unzip chromedriver_linux64 \
     && mv chromedriver InstaPy/assets/chromedriver \
     && chmod +x InstaPy/assets/chromedriver \
