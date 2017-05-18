@@ -4,7 +4,7 @@ MAINTAINER Grossmann Tim <contact.timgrossmann@gmail.com>
 
 # Set env variables
 ENV CHROME https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-ENV CRHOMEDRIVER http://chromedriver.storage.googleapis.com/2.29/chromedriver_linux64.zip
+ENV CHROMEDRIVER http://chromedriver.storage.googleapis.com/2.29/chromedriver_linux64.zip
 
 # Environment setup
 RUN apt-get update \
@@ -63,7 +63,7 @@ RUN apt-get clean \
 
 # Adding InstaPy
 RUN git clone https://github.com/timgrossmann/InstaPy.git \
-    && wget ${CRHOMEDRIVER} \
+    && wget ${CHROMEDRIVER} \
     && unzip chromedriver_linux64 \
     && mv chromedriver InstaPy/assets/chromedriver \
     && chmod +x InstaPy/assets/chromedriver \
